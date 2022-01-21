@@ -13,6 +13,7 @@ def main():
     player = Player()
     player_score = player.score
 
+    player_luck = 0
     play = ''
     while play != 'done':
         print()
@@ -26,19 +27,29 @@ def main():
         if card1num > card2num:
             if hilochoice.lower() == 'l':
                 player_score = player_score + 100
+                player_luck = 0
             else:
                 player_score = player_score - 75
+                player_luck = player_luck + 1
+
         
         elif card1num < card2num:
             if hilochoice.lower() == 'h':
                 player_score = player_score + 100
+                player_luck = 0
             else:
                 player_score = player_score - 75
+                player_luck = player_luck +1
+
         
         else:
             player_score = player_score + 0
 
         print(f'Your score is: {player_score}')
+        if player_luck == 3:
+            print('You have horrible luck...')
+        else:
+            bob = 'bob'
 
         if player_score > 0:
             play_again = input('Play again? [y/n] ')
