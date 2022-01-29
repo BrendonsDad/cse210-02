@@ -24,10 +24,9 @@ instance of it to start the game.
   - A terminal
 
 # Team Member Names & Emails
-Hilmar: 
-Pun: 
-Ella:
+Hilmar Orozco: oro18005@byui.edu 
+Pun Tangsiriruangrit: tan21004@byui.edu
+Ella Yang: yan20012@byui.edu
 Aubury Orr: orr20003@byui.edu
 
 
-At a minimum, it should contain the title, description, project structure, required software, and team member names and email addresses.

@@ -10,16 +10,28 @@ class Director:
 
     def playgame(self):
 
+        ## Makes a new player so we can keep their score
         player = Player()
         player_score = player.score
 
+        ## Calls the card class so we can generate the 
+        ## first card
         card1 = Card()
         card1num = card1.cardnumber
+        ## Calls the Director class so we can have some
+        ## variables needed to start the game
         gamespecs = Director()
         player_luck = gamespecs.player_luck
         play = gamespecs.play
 
         def generate_scores(card1num, card2num, hilochoice, player_score, player_luck):
+            ## This function will check their answers, and
+            ## see if they guessed correctly. If they did,
+            ## it will reward them with 100 points. If not, 
+            ## they lose 75 points. Also include code for 
+            ## the easter egg which will tallies each time
+            ## they guess wrong but resets when they guess 
+            ## right
             if card1num > card2num:
                 if hilochoice.lower() == 'l':
                     player_score = player_score + 100
@@ -41,6 +53,7 @@ class Director:
             else:
                 player_score = player_score + 0
 
+            ## Returns a list of all needed answers
             cardsandscores = [card1num, card2num, hilochoice, player_score, player_luck]
             return cardsandscores
 
